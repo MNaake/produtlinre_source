@@ -27,6 +27,8 @@ CREATE TABLE IF NOT EXISTS projects(
   updatedparent BOOLEAN NOT NULL,
   last_change TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   last_change_userid INTEGER,
+  up_vote integer,
+  down_vote integer,
   PRIMARY KEY (id),
   FOREIGN KEY (userid) REFERENCES users(id),
   FOREIGN KEY (parentid) REFERENCES projects(id),
